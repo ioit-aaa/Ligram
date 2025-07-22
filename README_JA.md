@@ -1,6 +1,9 @@
 ![](https://socialify.git.ci/PreviousAlone/Nnngram/image?description=1&forks=1&issues=1&name=1&owner=1&pulls=1&stargazers=1&theme=Dark)
 
-# Nagram-reborn based on Nullgram
+# Ligram
+
+Another telegram client. Based on NextAlone
+------
 
 ## Nullgramって何ですか
 [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=@NullgramClient&color=0088cc)](https://t.me/NullgramClient)  [![CI build](https://github.com/qwq233/Nullgram/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/qwq233/Nullgram/actions/workflows/ci.yml/)  [![Crowdin](https://badges.crowdin.net/nullgram/localized.svg)](https://crowdin.com/project/nullgram)
