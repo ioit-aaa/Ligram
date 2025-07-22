@@ -44,7 +44,7 @@ import java.util.Arrays
 
 object UpdateUtils {
 
-    private const val channelUsername = "Nnngram"
+    private const val channelUsername = "ioit_kiss"
 
     private val originalChannelUsername = String(Base64.decode("TnVsbGdyYW1DbGllbnQK", Base64.DEFAULT))
 
@@ -152,12 +152,12 @@ object UpdateUtils {
     private const val maxReadCount = 50
 //    private const val stableMetadataChannelID: Long = 1514826137
 //    private const val stableMetadataChannelName = "NullgramMetaData"
-    private const val previewMetadataChannelID: Long = 2135305446
-    private const val previewMetadataChannelName = "NnngramMetaData"
+    private const val previewMetadataChannelID: Long = 2709503107
+    private const val previewMetadataChannelName = "ioit_kiss"
 //    private const val stableChannelAPKsID: Long = 1645976613
 //    private const val stableChannelAPKsName = "NullgramAPKs"
-    private const val previewChannelAPKsID: Long = 1848519901
-    private const val previewChannelAPKsName = "Nnngram"
+    private const val previewChannelAPKsID: Long = 2709503107
+    private const val previewChannelAPKsName = "ioit_kiss"
 
     @JvmStatic
     fun retrieveUpdateMetadata(callback: (UpdateMetadata?, Boolean) -> Unit) {
