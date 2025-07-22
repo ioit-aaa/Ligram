@@ -113,7 +113,7 @@ dependencies {
 }
 
 android {
-    defaultConfig.applicationId = "xyz.nextalone.nnngram"
+    defaultConfig.applicationId = "xyz.nry2025.ligram"
     namespace = "org.telegram.messenger"
 
     sourceSets.getByName("main") {
