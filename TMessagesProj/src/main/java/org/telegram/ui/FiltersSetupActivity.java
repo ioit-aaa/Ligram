@@ -88,7 +88,7 @@ import org.telegram.ui.Components.UndoView;
 
 import java.util.ArrayList;
 
-import xyz.nextalone.nnngram.helpers.FolderIconHelper;
+import xyz.nextalone.ligram.helpers.FolderIconHelper;
 
 public class FiltersSetupActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate {
 

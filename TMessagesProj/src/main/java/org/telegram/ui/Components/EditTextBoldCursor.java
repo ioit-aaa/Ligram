@@ -87,8 +87,8 @@ import java.util.List;
 
 import kotlin.Unit;
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.helpers.HyperOsHelper;
-import xyz.nextalone.nnngram.helpers.TranslateHelper;
+import xyz.nextalone.ligram.helpers.HyperOsHelper;
+import xyz.nextalone.ligram.helpers.TranslateHelper;
 
 public class EditTextBoldCursor extends EditTextEffects {
 

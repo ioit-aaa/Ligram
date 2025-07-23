@@ -1,4 +1,4 @@
-![](https://socialify.git.ci/PreviousAlone/Nnngram/image?description=1&forks=1&issues=1&name=1&owner=1&pulls=1&stargazers=1&theme=Dark)
+![](https://socialify.git.ci/PreviousAlone/Ligram/image?description=1&forks=1&issues=1&name=1&owner=1&pulls=1&stargazers=1&theme=Dark)
 
 # Ligram
 

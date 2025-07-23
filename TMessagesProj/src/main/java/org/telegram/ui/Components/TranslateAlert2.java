@@ -102,7 +102,7 @@ import java.util.Locale;
 
 import kotlin.Unit;
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.helpers.TranslateHelper;
+import xyz.nextalone.ligram.helpers.TranslateHelper;
 
 public class TranslateAlert2 extends BottomSheet implements NotificationCenter.NotificationCenterDelegate {
 

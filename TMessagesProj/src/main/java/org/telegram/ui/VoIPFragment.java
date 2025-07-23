@@ -168,7 +168,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import xyz.nextalone.nnngram.utils.PermissionUtils;
+import xyz.nextalone.ligram.utils.PermissionUtils;
 
 public class VoIPFragment implements
     VoIPService.StateListener,

@@ -212,7 +212,7 @@ import java.util.List;
 import java.util.Locale;
 
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.utils.PermissionUtils;
+import xyz.nextalone.ligram.utils.PermissionUtils;
 
 public class ChatActivityEnterView extends BlurredFrameLayout implements NotificationCenter.NotificationCenterDelegate, SizeNotifierFrameLayout.SizeNotifierFrameLayoutDelegate, StickersAlert.StickersAlertDelegate, SuggestEmojiView.AnchorViewDelegate {
 

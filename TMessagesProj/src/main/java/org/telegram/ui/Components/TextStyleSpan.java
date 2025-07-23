@@ -17,7 +17,7 @@ import org.telegram.messenger.AndroidUtilities;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.Theme;
 
-import xyz.nextalone.nnngram.utils.TypefaceUtils;
+import xyz.nextalone.ligram.utils.TypefaceUtils;
 
 public class TextStyleSpan extends MetricAffectingSpan {
 

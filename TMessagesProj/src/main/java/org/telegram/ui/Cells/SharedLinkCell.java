@@ -71,8 +71,8 @@ import java.util.Stack;
 import java.util.concurrent.atomic.AtomicReference;
 
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.config.ConfigManager;
-import xyz.nextalone.nnngram.utils.Defines;
+import xyz.nextalone.ligram.config.ConfigManager;
+import xyz.nextalone.ligram.utils.Defines;
 
 public class SharedLinkCell extends FrameLayout {
     private final static int SPOILER_TYPE_LINK = 0,

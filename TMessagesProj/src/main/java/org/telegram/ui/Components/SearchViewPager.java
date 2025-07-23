@@ -88,8 +88,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
 
-import xyz.nextalone.nnngram.config.ConfigManager;
-import xyz.nextalone.nnngram.utils.Defines;
+import xyz.nextalone.ligram.config.ConfigManager;
+import xyz.nextalone.ligram.utils.Defines;
 
 public class SearchViewPager extends ViewPagerFixed implements FilteredSearchView.UiCallback, NotificationCenter.NotificationCenterDelegate {
 

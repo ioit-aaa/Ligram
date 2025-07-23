@@ -261,16 +261,16 @@ import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
 
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.config.ForwardContext;
-import xyz.nextalone.nnngram.helpers.PasscodeHelper;
-import xyz.nextalone.nnngram.helpers.QrHelper;
-import xyz.nextalone.nnngram.ui.AppLinkVerifyBottomSheet;
-import xyz.nextalone.nnngram.ui.BackButtonRecentMenu;
-import xyz.nextalone.nnngram.ui.SendOptionsMenuLayout;
-import xyz.nextalone.nnngram.utils.APKUtils;
-import xyz.nextalone.nnngram.utils.Defines;
-import xyz.nextalone.nnngram.utils.PrivacyUtils;
-import xyz.nextalone.nnngram.utils.UpdateUtils;
+import xyz.nextalone.ligram.config.ForwardContext;
+import xyz.nextalone.ligram.helpers.PasscodeHelper;
+import xyz.nextalone.ligram.helpers.QrHelper;
+import xyz.nextalone.ligram.ui.AppLinkVerifyBottomSheet;
+import xyz.nextalone.ligram.ui.BackButtonRecentMenu;
+import xyz.nextalone.ligram.ui.SendOptionsMenuLayout;
+import xyz.nextalone.ligram.utils.APKUtils;
+import xyz.nextalone.ligram.utils.Defines;
+import xyz.nextalone.ligram.utils.PrivacyUtils;
+import xyz.nextalone.ligram.utils.UpdateUtils;
 
 public class DialogsActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate, FloatingDebugProvider {
 

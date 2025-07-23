@@ -491,15 +491,15 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name="xyz.nextalone.nnngram.utils.APKUtils$UpdateReceiver" android:exported="true">
+        <receiver android:name="xyz.nextalone.ligram.utils.APKUtils$UpdateReceiver" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
             </intent-filter>
         </receiver>
 
-        <receiver android:name="xyz.nextalone.nnngram.SaveToDownloadReceiver" android:exported="false">
+        <receiver android:name="xyz.nextalone.ligram.SaveToDownloadReceiver" android:exported="false">
             <intent-filter>
-                <action android:name="xyz.nextalone.nnngram.SAVE_TO_DOWNLOAD_CANCEL" />
+                <action android:name="xyz.nextalone.ligram.SAVE_TO_DOWNLOAD_CANCEL" />
             </intent-filter>
         </receiver>
 

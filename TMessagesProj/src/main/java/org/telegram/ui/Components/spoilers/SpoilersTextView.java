@@ -54,8 +54,8 @@ import java.util.List;
 import java.util.Stack;
 
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.config.ConfigManager;
-import xyz.nextalone.nnngram.utils.Defines;
+import xyz.nextalone.ligram.config.ConfigManager;
+import xyz.nextalone.ligram.utils.Defines;
 
 public class SpoilersTextView extends TextView implements TextSelectionHelper.SimpleSelectabeleView {
     private SpoilersClickDetector clickDetector;

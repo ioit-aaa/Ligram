@@ -86,9 +86,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.helpers.HyperOsHelper;
-import xyz.nextalone.nnngram.helpers.TranslateHelper;
-import xyz.nextalone.nnngram.utils.Log;
+import xyz.nextalone.ligram.helpers.HyperOsHelper;
+import xyz.nextalone.ligram.helpers.TranslateHelper;
+import xyz.nextalone.ligram.utils.Log;
 
 public abstract class TextSelectionHelper<Cell extends TextSelectionHelper.SelectableView> {
 

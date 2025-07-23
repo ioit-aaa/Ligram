@@ -128,7 +128,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.utils.StringUtils;
+import xyz.nextalone.ligram.utils.StringUtils;
 
 public class MessageObject {
 

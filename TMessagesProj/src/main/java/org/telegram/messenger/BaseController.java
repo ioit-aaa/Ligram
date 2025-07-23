@@ -3,8 +3,8 @@ package org.telegram.messenger;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.ui.Components.Paint.PersistColorPalette;
 
-import xyz.nextalone.nnngram.config.CloudStorage;
-import xyz.nextalone.nnngram.helpers.ConnectionsHelper;
+import xyz.nextalone.ligram.config.CloudStorage;
+import xyz.nextalone.ligram.helpers.ConnectionsHelper;
 
 public class BaseController {
 

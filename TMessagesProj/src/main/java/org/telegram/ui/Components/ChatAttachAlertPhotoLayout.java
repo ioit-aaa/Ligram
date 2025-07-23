@@ -126,8 +126,8 @@ import java.util.List;
 import java.util.Map;
 
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.utils.Log;
-import xyz.nextalone.nnngram.utils.PermissionUtils;
+import xyz.nextalone.ligram.utils.Log;
+import xyz.nextalone.ligram.utils.PermissionUtils;
 
 public class ChatAttachAlertPhotoLayout extends ChatAttachAlert.AttachAlertLayout implements NotificationCenter.NotificationCenterDelegate {
 

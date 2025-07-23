@@ -25,7 +25,7 @@ import java.io.File;
 import java.io.OutputStreamWriter;
 import java.util.Map;
 
-import xyz.nextalone.nnngram.utils.Log;
+import xyz.nextalone.ligram.utils.Log;
 
 /**
  * @deprecated use {@link Log} instead

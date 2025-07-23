@@ -82,7 +82,7 @@ import org.telegram.ui.Stories.StoriesUtilities;
 import java.util.Locale;
 
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.utils.StringUtils;
+import xyz.nextalone.ligram.utils.StringUtils;
 
 public class ProfileSearchCell extends BaseCell implements NotificationCenter.NotificationCenterDelegate, Theme.Colorable {
 

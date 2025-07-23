@@ -330,12 +330,12 @@ import java.util.Objects;
 
 import kotlin.Unit;
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.config.ConfigManager;
-import xyz.nextalone.nnngram.helpers.QrHelper;
-import xyz.nextalone.nnngram.helpers.TranslateHelper;
-import xyz.nextalone.nnngram.utils.Defines;
-import xyz.nextalone.nnngram.utils.Log;
-import xyz.nextalone.nnngram.utils.MessageUtils;
+import xyz.nextalone.ligram.config.ConfigManager;
+import xyz.nextalone.ligram.helpers.QrHelper;
+import xyz.nextalone.ligram.helpers.TranslateHelper;
+import xyz.nextalone.ligram.utils.Defines;
+import xyz.nextalone.ligram.utils.Log;
+import xyz.nextalone.ligram.utils.MessageUtils;
 
 @SuppressLint("WrongConstant")
 @SuppressWarnings("unchecked")

@@ -148,8 +148,8 @@ import java.util.Objects;
 import java.util.Stack;
 
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.utils.MessageUtils;
-import xyz.nextalone.nnngram.utils.StringUtils;
+import xyz.nextalone.ligram.utils.MessageUtils;
+import xyz.nextalone.ligram.utils.StringUtils;
 
 
 public class DialogCell extends BaseCell implements StoriesListPlaceProvider.AvatarOverlaysView {

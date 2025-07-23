@@ -43,8 +43,8 @@ import java.util.zip.GZIPInputStream;
 import java.util.zip.ZipException;
 
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.config.ConfigManager;
-import xyz.nextalone.nnngram.utils.Defines;
+import xyz.nextalone.ligram.config.ConfigManager;
+import xyz.nextalone.ligram.utils.Defines;
 
 public class FileLoadOperation {
 

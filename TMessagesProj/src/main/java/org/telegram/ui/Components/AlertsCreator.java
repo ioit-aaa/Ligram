@@ -168,7 +168,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.stream.Collectors;
 
-import xyz.nextalone.nnngram.helpers.PasscodeHelper;
+import xyz.nextalone.ligram.helpers.PasscodeHelper;
 
 public class AlertsCreator {
     public final static int PERMISSIONS_REQUEST_TOP_ICON_SIZE = 72;

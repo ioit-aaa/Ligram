@@ -251,11 +251,11 @@ import java.util.Stack;
 import java.util.concurrent.atomic.AtomicReference;
 
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.config.ConfigManager;
-import xyz.nextalone.nnngram.utils.Defines;
-import xyz.nextalone.nnngram.utils.NeteaseEmbed;
-import xyz.nextalone.nnngram.utils.StringUtils;
-import xyz.nextalone.nnngram.utils.Utils;
+import xyz.nextalone.ligram.config.ConfigManager;
+import xyz.nextalone.ligram.utils.Defines;
+import xyz.nextalone.ligram.utils.NeteaseEmbed;
+import xyz.nextalone.ligram.utils.StringUtils;
+import xyz.nextalone.ligram.utils.Utils;
 
 public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate, ImageReceiver.ImageReceiverDelegate, DownloadController.FileDownloadProgressListener, TextSelectionHelper.SelectableView, NotificationCenter.NotificationCenterDelegate {
     private final static int TIME_APPEAR_MS = 200;

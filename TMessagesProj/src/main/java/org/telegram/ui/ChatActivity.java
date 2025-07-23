@@ -428,24 +428,24 @@ import java.util.stream.Collectors;
 
 import kotlin.Unit;
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.activity.MessageDetailActivity;
-import xyz.nextalone.nnngram.config.ConfigManager;
-import xyz.nextalone.nnngram.config.DialogConfig;
-import xyz.nextalone.nnngram.config.ForwardContext;
-import xyz.nextalone.nnngram.helpers.MessageHelper;
-import xyz.nextalone.nnngram.helpers.QrHelper;
-import xyz.nextalone.nnngram.helpers.TranslateHelper;
-import xyz.nextalone.nnngram.helpers.TranslateHelper.Status;
-import xyz.nextalone.nnngram.translate.LanguageDetectorTimeout;
-import xyz.nextalone.nnngram.ui.BackButtonRecentMenu;
-import xyz.nextalone.nnngram.ui.TranslatorSettingsPopupWrapper;
-import xyz.nextalone.nnngram.ui.sortList.items.TextStyleItems;
-import xyz.nextalone.nnngram.utils.Defines;
-import xyz.nextalone.nnngram.utils.Log;
-import xyz.nextalone.nnngram.utils.MessageUtils;
-import xyz.nextalone.nnngram.utils.PermissionUtils;
-import xyz.nextalone.nnngram.utils.StringUtils;
-import xyz.nextalone.nnngram.utils.WordUtils;
+import xyz.nextalone.ligram.activity.MessageDetailActivity;
+import xyz.nextalone.ligram.config.ConfigManager;
+import xyz.nextalone.ligram.config.DialogConfig;
+import xyz.nextalone.ligram.config.ForwardContext;
+import xyz.nextalone.ligram.helpers.MessageHelper;
+import xyz.nextalone.ligram.helpers.QrHelper;
+import xyz.nextalone.ligram.helpers.TranslateHelper;
+import xyz.nextalone.ligram.helpers.TranslateHelper.Status;
+import xyz.nextalone.ligram.translate.LanguageDetectorTimeout;
+import xyz.nextalone.ligram.ui.BackButtonRecentMenu;
+import xyz.nextalone.ligram.ui.TranslatorSettingsPopupWrapper;
+import xyz.nextalone.ligram.ui.sortList.items.TextStyleItems;
+import xyz.nextalone.ligram.utils.Defines;
+import xyz.nextalone.ligram.utils.Log;
+import xyz.nextalone.ligram.utils.MessageUtils;
+import xyz.nextalone.ligram.utils.PermissionUtils;
+import xyz.nextalone.ligram.utils.StringUtils;
+import xyz.nextalone.ligram.utils.WordUtils;
 
 @SuppressWarnings("unchecked")
 public class ChatActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate, DialogsActivity.DialogsActivityDelegate, LocationActivity.LocationActivityDelegate, ChatAttachAlertDocumentLayout.DocumentSelectActivityDelegate, ChatActivityInterface, FloatingDebugProvider, ForwardContext, InstantCameraView.Delegate {

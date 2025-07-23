@@ -88,8 +88,8 @@ import java.util.Collections;
 import java.util.List;
 
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.utils.VibrationUtils;
-import xyz.nextalone.nnngram.utils.VibrationUtils;
+import xyz.nextalone.ligram.utils.VibrationUtils;
+import xyz.nextalone.ligram.utils.VibrationUtils;
 
 public class ActionBarLayout extends FrameLayout implements INavigationLayout, FloatingDebugProvider {
 

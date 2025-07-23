@@ -17,7 +17,7 @@
  * <https://www.gnu.org/licenses/>
  */
 
-package xyz.nextalone.nnngram
+package xyz.nextalone.ligram
 
 import com.google.devtools.ksp.processing.CodeGenerator
 import com.google.devtools.ksp.processing.Dependencies
@@ -42,11 +42,11 @@ class ConfigSwitchGenerator(
     private var finished = false
     override fun process(resolver: Resolver): List<KSAnnotated> {
         val objectBuilder = TypeSpec.objectBuilder("Config")
-        val configManager = ClassName("xyz.nextalone.nnngram.config", "ConfigManager")
-        val defines = ClassName("xyz.nextalone.nnngram.utils", "Defines")
+        val configManager = ClassName("xyz.nextalone.ligram.config", "ConfigManager")
+        val defines = ClassName("xyz.nextalone.ligram.utils", "Defines")
         val dependencies = mutableListOf<KSFile>()
 
-        resolver.getSymbolsWithAnnotation("xyz.nextalone.nnngram.BooleanConfig")
+        resolver.getSymbolsWithAnnotation("xyz.nextalone.ligram.BooleanConfig")
             .filterIsInstance<KSPropertyDeclaration>()
             .toList()
             .let {
@@ -89,7 +89,7 @@ class ConfigSwitchGenerator(
                 }
             }
 
-        resolver.getSymbolsWithAnnotation("xyz.nextalone.nnngram.IntConfig")
+        resolver.getSymbolsWithAnnotation("xyz.nextalone.ligram.IntConfig")
             .filterIsInstance<KSPropertyDeclaration>()
             .toList()
             .let {
@@ -128,7 +128,7 @@ class ConfigSwitchGenerator(
                 }
             }
 
-        resolver.getSymbolsWithAnnotation("xyz.nextalone.nnngram.StringConfig")
+        resolver.getSymbolsWithAnnotation("xyz.nextalone.ligram.StringConfig")
             .filterIsInstance<KSPropertyDeclaration>()
             .toList()
             .let {

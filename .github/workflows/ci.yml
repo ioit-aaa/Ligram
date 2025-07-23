@@ -83,7 +83,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         name: Upload apk (arm64-v8a)
         with:
-          name: Nnngram-arm64-v8a-${{ env.SHA7 }}
+          name: Ligram-arm64-v8a-${{ env.SHA7 }}
           path: ${{ env.APK_FILE }}
 
       - name: Upload mapping
@@ -98,16 +98,16 @@ jobs:
           mkdir -p TMessagesProj/config/
           echo "${{ secrets.KEYSTORE }}" | base64 -d > TMessagesProj/config/release.keystore
           echo "${{ secrets.GOOGLE_SERVICES_JSON }}" | base64 -d > TMessagesProj/google-services.json
-          sed -i 's@xyz.nextalone.nnngram@org.telegram.messenger@' TMessagesProj/build.gradle.kts
-          sed -i 's@xyz.nextalone.nnngram@org.telegram.messenger@' TMessagesProj/google-services.json
+          sed -i 's@xyz.nextalone.ligram@org.telegram.messenger@' TMessagesProj/build.gradle.kts
+          sed -i 's@xyz.nextalone.ligram@org.telegram.messenger@' TMessagesProj/google-services.json
           ./gradlew TMessagesProj:assembleRelease
-          find TMessagesProj/build/outputs/apk -name '*arm64*.apk' -exec mv {} TMessagesProj/build/outputs/apk/Nnngram-arm64-v8a-${{ env.SHA7 }}-Telegram.apk \;
+          find TMessagesProj/build/outputs/apk -name '*arm64*.apk' -exec mv {} TMessagesProj/build/outputs/apk/Ligram-arm64-v8a-${{ env.SHA7 }}-Telegram.apk \;
           echo "APK_FILE=$(find TMessagesProj/build/outputs/apk -name '*arm64*.apk')" >> $GITHUB_ENV
 
       - uses: actions/upload-artifact@master
         name: Upload apk (arm64-v8a) (Telegram)
         with:
-          name: Nnngram-arm64-v8a-${{ env.SHA7 }}-Telegram
+          name: Ligram-arm64-v8a-${{ env.SHA7 }}-Telegram
           path: ${{ env.APK_FILE }}
 
       - name: Upload mapping

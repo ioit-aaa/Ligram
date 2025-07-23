@@ -204,7 +204,7 @@ public class FilesMigrationService extends Service {
                     }
                 }
             }
-            File oldDirectory = new File(path, "Nnngram");
+            File oldDirectory = new File(path, "Ligram");
             hasOldFolder = oldDirectory.exists();
         }
         if (hasOldFolder) {

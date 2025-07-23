@@ -1,4 +1,4 @@
-![](https://socialify.git.ci/PreviousAlone/Nnngram/image?description=1&forks=1&issues=1&name=1&owner=1&pulls=1&stargazers=1&theme=Dark)
+![](https://socialify.git.ci/PreviousAlone/Ligram/image?description=1&forks=1&issues=1&name=1&owner=1&pulls=1&stargazers=1&theme=Dark)
 
 # Ligram
 
@@ -37,13 +37,13 @@ Then, please detail your issue (ENGLISH ONLY), create an issue or submit it to o
 
 Make sure using the issue template and writing the detailed version number I DO NOT KNOW WTF IS _I HAVE BEEN USING THE LATEST VERSION_
 
-If you experience a crash, you can use logcat to catch the log (TAG: `Nnngram` ).
+If you experience a crash, you can use logcat to catch the log (TAG: `Ligram` ).
 
 ### Compilation Guide
 
 You will require Android NDK rev. 21 and Android SDK 14
 
-1. Download the Telegram source code from https://github.com/PreviousAlone/Nnngram
+1. Download the Telegram source code from https://github.com/PreviousAlone/Ligram
 2. Download the ccache from [here](https://ccache.dev/) and make sure it is in your `PATH`.
 3. Replace release.keystore in TMessagesProj/config with your own one.
 4. Fill out RELEASE_KEY_PASSWORD, RELEASE_KEY_ALIAS, RELEASE_STORE_PASSWORD in gradle.properties to access your release.keystore

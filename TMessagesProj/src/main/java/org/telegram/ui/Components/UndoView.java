@@ -85,8 +85,8 @@ import org.telegram.ui.PaymentFormActivity;
 import java.util.ArrayList;
 
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.config.ConfigManager;
-import xyz.nextalone.nnngram.utils.Defines;
+import xyz.nextalone.ligram.config.ConfigManager;
+import xyz.nextalone.ligram.utils.Defines;
 
 @SuppressWarnings("FieldCanBeLocal")
 @Deprecated // use Bulletin instead

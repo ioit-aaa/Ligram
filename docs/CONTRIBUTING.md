@@ -21,11 +21,11 @@
 2. Encode in UTF-8, with LF as the end of line sequence.
 
 3. Config Key should be defined
-   in [Defines.kt](../TMessagesProj/src/main/java/xyz/nextalone/nnngram/utils/Defines.kt).
+   in [Defines.kt](../TMessagesProj/src/main/java/xyz/nextalone/ligram/utils/Defines.kt).
 
 4. Variable naming adopts camelcase.
 
-5. DO NOT USE FileLog. Use [Log](../TMessagesProj/src/main/java/xyz/nextalone/nnngram/utils/Log.kt)
+5. DO NOT USE FileLog. Use [Log](../TMessagesProj/src/main/java/xyz/nextalone/ligram/utils/Log.kt)
    instead.
 
 6. Indent with 4 spaces.

@@ -186,7 +186,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
-import xyz.nextalone.nnngram.utils.PermissionUtils;
+import xyz.nextalone.ligram.utils.PermissionUtils;
 
 public class StoryRecorder implements NotificationCenter.NotificationCenterDelegate {
 

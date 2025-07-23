@@ -67,7 +67,7 @@ import java.util.Locale;
 import java.util.TimeZone;
 
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.utils.Log;
+import xyz.nextalone.ligram.utils.Log;
 
 public class LocaleController {
 
@@ -1481,13 +1481,13 @@ public class LocaleController {
         }
 
 //        if (value.contains("Telegram"))
-//            value = value.replace("Telegram", "Nnngram");
+//            value = value.replace("Telegram", "Ligram");
         if (value.contains("TELEOFFICIAL"))
             value = value.replace("TELEOFFICIAL", "Telegram");
         if (value.contains("NullgramClient"))
             value = value.replace("NullgramClient", "nagram_group");
         if (value.contains("Nullgram"))
-            value = value.replace("Nullgram", "Nnngram");
+            value = value.replace("Nullgram", "Ligram");
         return value;
     }
 
@@ -1716,7 +1716,7 @@ public class LocaleController {
                 value = value.replace("TELEOFFICIAL", "Telegram");
             }
             if (value.contains("Nullgram")) {
-                value = value.replace("Nullgram", "Nnngram");
+                value = value.replace("Nullgram", "Ligram");
             }
 
             if (getInstance().currentLocale != null) {

@@ -243,13 +243,13 @@ import java.util.zip.ZipInputStream;
 
 import kotlin.Unit;
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.config.ConfigManager;
-import xyz.nextalone.nnngram.helpers.MonetHelper;
-import xyz.nextalone.nnngram.helpers.SettingsHelper;
-import xyz.nextalone.nnngram.utils.Defines;
-import xyz.nextalone.nnngram.utils.Log;
-import xyz.nextalone.nnngram.utils.UpdateUtils;
-import xyz.nextalone.nnngram.utils.Utils;
+import xyz.nextalone.ligram.config.ConfigManager;
+import xyz.nextalone.ligram.helpers.MonetHelper;
+import xyz.nextalone.ligram.helpers.SettingsHelper;
+import xyz.nextalone.ligram.utils.Defines;
+import xyz.nextalone.ligram.utils.Log;
+import xyz.nextalone.ligram.utils.UpdateUtils;
+import xyz.nextalone.ligram.utils.Utils;
 
 public class LaunchActivity extends BasePermissionsActivity implements INavigationLayout.INavigationLayoutDelegate, NotificationCenter.NotificationCenterDelegate, DialogsActivity.DialogsActivityDelegate, IPipActivity {
     public final static String EXTRA_FORCE_NOT_INTERNAL_APPS = "force_not_internal_apps";

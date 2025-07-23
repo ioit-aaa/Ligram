@@ -234,9 +234,9 @@ import java.util.regex.Pattern;
 import java.util.zip.GZIPOutputStream;
 
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.utils.AlertUtil;
-import xyz.nextalone.nnngram.utils.AnalyticsUtils;
-import xyz.nextalone.nnngram.utils.TypefaceUtils;
+import xyz.nextalone.ligram.utils.AlertUtil;
+import xyz.nextalone.ligram.utils.AnalyticsUtils;
+import xyz.nextalone.ligram.utils.TypefaceUtils;
 
 public class AndroidUtilities {
     public final static int LIGHT_STATUS_BAR_OVERLAY = 0x0f000000, DARK_STATUS_BAR_OVERLAY = 0x33000000;

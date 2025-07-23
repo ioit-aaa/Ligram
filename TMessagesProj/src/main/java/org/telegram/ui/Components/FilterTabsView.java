@@ -75,8 +75,8 @@ import org.telegram.ui.Stories.recorder.HintView2;
 import java.util.ArrayList;
 
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.helpers.FolderIconHelper;
-import xyz.nextalone.nnngram.utils.Defines;
+import xyz.nextalone.ligram.helpers.FolderIconHelper;
+import xyz.nextalone.ligram.utils.Defines;
 
 public class FilterTabsView extends FrameLayout {
 

@@ -74,7 +74,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import xyz.nextalone.nnngram.utils.PermissionUtils;
+import xyz.nextalone.ligram.utils.PermissionUtils;
 
 public class ImageUpdater implements NotificationCenter.NotificationCenterDelegate, PhotoCropActivity.PhotoEditActivityDelegate {
     private final static int ID_TAKE_PHOTO = 0,

@@ -52,7 +52,7 @@ import java.util.Locale;
 import java.util.Objects;
 
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.utils.Utils;
+import xyz.nextalone.ligram.utils.Utils;
 
 public class Emoji {
 

@@ -32,8 +32,8 @@ import org.telegram.tgnet.tl.TL_account;
 
 import java.util.Arrays;
 
-import xyz.nextalone.nnngram.helpers.PasscodeHelper;
-import xyz.nextalone.nnngram.utils.AnalyticsUtils;
+import xyz.nextalone.ligram.helpers.PasscodeHelper;
+import xyz.nextalone.ligram.utils.AnalyticsUtils;
 
 public class UserConfig extends BaseController {
 

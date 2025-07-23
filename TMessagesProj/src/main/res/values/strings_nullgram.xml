@@ -19,9 +19,9 @@
   -->
 
 <resources>
-    <string name="NullgramName" translatable="false">Nnngram</string>
-    <string name="NullgramPushService">Nnngram Push Service</string>
-    <string name="NullSettings">Nnngram Settings</string>
+    <string name="NullgramName" translatable="false">Ligram</string>
+    <string name="NullgramPushService">Ligram Push Service</string>
+    <string name="NullSettings">Ligram Settings</string>
     <string name="OfficialChannel">Official Channel</string>
     <string name="Chat">Chat</string>
     <string name="Experiment">Experiment</string>

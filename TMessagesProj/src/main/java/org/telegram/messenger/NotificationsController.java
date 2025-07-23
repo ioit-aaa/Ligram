@@ -107,7 +107,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.function.Consumer;
 
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.helpers.PasscodeHelper;
+import xyz.nextalone.ligram.helpers.PasscodeHelper;
 
 public class NotificationsController extends BaseController {
 

@@ -334,20 +334,20 @@ import java.util.zip.ZipOutputStream;
 
 import kotlin.Unit;
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.InlinesKt;
-import xyz.nextalone.nnngram.activity.MainSettingActivity;
-import xyz.nextalone.nnngram.config.ConfigManager;
-import xyz.nextalone.nnngram.helpers.TranslateHelper;
-import xyz.nextalone.nnngram.translate.LanguageDetectorTimeout;
-import xyz.nextalone.nnngram.ui.AutoTranslatePopupWrapper;
-import xyz.nextalone.nnngram.ui.BackButtonRecentMenu;
-import xyz.nextalone.nnngram.ui.BottomBuilder;
-import xyz.nextalone.nnngram.ui.SimpleTextViewSwitcher;
-import xyz.nextalone.nnngram.utils.AlertUtil;
-import xyz.nextalone.nnngram.utils.Defines;
-import xyz.nextalone.nnngram.utils.Log;
-import xyz.nextalone.nnngram.utils.StringUtils;
-import xyz.nextalone.nnngram.utils.Utils;
+import xyz.nextalone.ligram.InlinesKt;
+import xyz.nextalone.ligram.activity.MainSettingActivity;
+import xyz.nextalone.ligram.config.ConfigManager;
+import xyz.nextalone.ligram.helpers.TranslateHelper;
+import xyz.nextalone.ligram.translate.LanguageDetectorTimeout;
+import xyz.nextalone.ligram.ui.AutoTranslatePopupWrapper;
+import xyz.nextalone.ligram.ui.BackButtonRecentMenu;
+import xyz.nextalone.ligram.ui.BottomBuilder;
+import xyz.nextalone.ligram.ui.SimpleTextViewSwitcher;
+import xyz.nextalone.ligram.utils.AlertUtil;
+import xyz.nextalone.ligram.utils.Defines;
+import xyz.nextalone.ligram.utils.Log;
+import xyz.nextalone.ligram.utils.StringUtils;
+import xyz.nextalone.ligram.utils.Utils;
 
 public class ProfileActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate, DialogsActivity.DialogsActivityDelegate, SharedMediaLayout.SharedMediaPreloaderDelegate, ImageUpdater.ImageUpdaterDelegate, SharedMediaLayout.Delegate {
     private final static int PHONE_OPTION_CALL = 0,

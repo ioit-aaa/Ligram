@@ -54,7 +54,7 @@ import java.util.Collections;
 
 import kotlin.jvm.functions.Function0;
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.helpers.PasscodeHelper;
+import xyz.nextalone.ligram.helpers.PasscodeHelper;
 
 public class DrawerLayoutAdapter extends RecyclerListView.SelectionAdapter {
 

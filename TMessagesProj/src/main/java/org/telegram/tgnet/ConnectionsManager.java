@@ -91,11 +91,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 import javax.net.ssl.SSLException;
 
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.InlinesKt;
-import xyz.nextalone.nnngram.helpers.WebSocketHelper;
-import xyz.nextalone.nnngram.utils.DatabaseUtils;
-import xyz.nextalone.nnngram.utils.Log;
-import xyz.nextalone.nnngram.utils.Utils;
+import xyz.nextalone.ligram.InlinesKt;
+import xyz.nextalone.ligram.helpers.WebSocketHelper;
+import xyz.nextalone.ligram.utils.DatabaseUtils;
+import xyz.nextalone.ligram.utils.Log;
+import xyz.nextalone.ligram.utils.Utils;
 
 @SuppressWarnings("JavaJniMissingFunction")
 public class ConnectionsManager extends BaseController {

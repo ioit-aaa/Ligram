@@ -72,10 +72,10 @@ import org.telegram.ui.bots.BotWebViewAttachedSheet;
 import java.util.ArrayList;
 
 import xyz.nextalone.gen.Config;
-import xyz.nextalone.nnngram.config.CloudStorage;
-import xyz.nextalone.nnngram.helpers.ConnectionsHelper;
-import xyz.nextalone.nnngram.utils.MessageUtils;
-import xyz.nextalone.nnngram.utils.VibrationUtils;
+import xyz.nextalone.ligram.config.CloudStorage;
+import xyz.nextalone.ligram.helpers.ConnectionsHelper;
+import xyz.nextalone.ligram.utils.MessageUtils;
+import xyz.nextalone.ligram.utils.VibrationUtils;
 
 public abstract class BaseFragment {
 
