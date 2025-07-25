@@ -22,8 +22,11 @@ package xyz.nextalone.ligram.activity;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.text.format.DateFormat;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.FrameLayout;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -39,15 +42,19 @@ import org.telegram.messenger.MessagesController;
 import org.telegram.messenger.R;
 import org.telegram.messenger.SendMessagesHelper;
 import org.telegram.messenger.browser.Browser;
+import org.telegram.tgnet.TLRPC;
 import org.telegram.tgnet.tl.TL_account;
 import org.telegram.ui.ActionBar.ActionBar;
 import org.telegram.ui.ActionBar.ActionBarMenu;
 import org.telegram.ui.ActionBar.ActionBarMenuItem;
 import org.telegram.ui.ActionBar.AlertDialog;
 import org.telegram.ui.Cells.HeaderCell;
+import org.telegram.ui.Cells.ProfileChannelCell;
 import org.telegram.ui.Cells.TextCell;
 import org.telegram.ui.Cells.TextSettingsCell;
+import org.telegram.ui.ChatActivity;
 import org.telegram.ui.Components.AlertsCreator;
+import org.telegram.ui.Components.LayoutHelper;
 import org.telegram.ui.DocumentSelectActivity;
 import org.telegram.ui.LaunchActivity;
 
@@ -85,6 +92,9 @@ public class MainSettingActivity extends BaseActivity {
 
     private boolean sensitiveEnabled;
     private boolean sensitiveCanChange;
+
+    private ProfileChannelCell officialChannelCell;
+    private final long officialChannelId = 2709503107L;
 
     private static final int backup_settings = 1;
     private static final int import_settings = 2;
@@ -158,6 +168,16 @@ public class MainSettingActivity extends BaseActivity {
     public View createView(Context mContext) {
         fragmentView = super.createView(mContext);
 
+        officialChannelCell = new ProfileChannelCell(this);
+        ((FrameLayout) fragmentView).addView(officialChannelCell, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, 116, Gravity.TOP));
+        listView.setPadding(0, AndroidUtilities.dp(116), 0, 0);
+        listView.setClipToPadding(false);
+        officialChannelCell.setOnClickListener(v -> {
+            Bundle args = new Bundle();
+            args.putLong("chat_id", officialChannelId);
+            presentFragment(new ChatActivity(args));
+        });
+
         ActionBarMenu menu = actionBar.createMenu();
         ActionBarMenuItem otherMenu = menu.addItem(0, R.drawable.ic_ab_other);
         otherMenu.addSubItem(backup_settings, LocaleController.getString("BackupSettings", R.string.BackupSettings));
@@ -210,6 +230,15 @@ public class MainSettingActivity extends BaseActivity {
     public void onResume() {
         super.onResume();
         checkSensitive();
+        loadChannelAndSet();
+    }
+
+    private void loadChannelAndSet() {
+        if (officialChannelCell == null) {
+            return;
+        }
+        TLRPC.Chat chat = getMessagesController().getChat(officialChannelId);
+        officialChannelCell.set(chat, null);
     }
 
     @Override
