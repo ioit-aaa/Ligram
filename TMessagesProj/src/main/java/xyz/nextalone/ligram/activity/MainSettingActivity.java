@@ -24,9 +24,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.format.DateFormat;
-import android.view.Gravity;
 import android.view.View;
-import android.widget.FrameLayout;
+import android.view.ViewGroup;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -54,7 +53,7 @@ import org.telegram.ui.Cells.TextCell;
 import org.telegram.ui.Cells.TextSettingsCell;
 import org.telegram.ui.ChatActivity;
 import org.telegram.ui.Components.AlertsCreator;
-import org.telegram.ui.Components.LayoutHelper;
+import org.telegram.ui.Components.RecyclerListView;
 import org.telegram.ui.DocumentSelectActivity;
 import org.telegram.ui.LaunchActivity;
 
@@ -73,6 +72,7 @@ import xyz.nextalone.ligram.utils.ShareUtil;
 @SuppressLint("NotifyDataSetChanged")
 public class MainSettingActivity extends BaseActivity {
 
+    private int officialChannelRow;
     private int categoriesRow;
     private int generalRow;
     private int chatRow;
@@ -93,7 +93,6 @@ public class MainSettingActivity extends BaseActivity {
     private boolean sensitiveEnabled;
     private boolean sensitiveCanChange;
 
-    private ProfileChannelCell officialChannelCell;
     private final long officialChannelId = 2709503107L;
 
     private static final int backup_settings = 1;
@@ -111,8 +110,11 @@ public class MainSettingActivity extends BaseActivity {
 
     @Override
     protected void onItemClick(View view, int position, float x, float y) {
-
-        if (position == chatRow) {
+        if (position == officialChannelRow) {
+            Bundle args = new Bundle();
+            args.putLong("chat_id", officialChannelId);
+            presentFragment(new ChatActivity(args));
+        } else if (position == chatRow) {
             presentFragment(new ChatSettingActivity());
         } else if (position == generalRow) {
             presentFragment(new GeneralSettingActivity());
@@ -168,16 +170,6 @@ public class MainSettingActivity extends BaseActivity {
     public View createView(Context mContext) {
         fragmentView = super.createView(mContext);
 
-        officialChannelCell = new ProfileChannelCell(this);
-        ((FrameLayout) fragmentView).addView(officialChannelCell, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, 116, Gravity.TOP));
-        listView.setPadding(0, AndroidUtilities.dp(116), 0, 0);
-        listView.setClipToPadding(false);
-        officialChannelCell.setOnClickListener(v -> {
-            Bundle args = new Bundle();
-            args.putLong("chat_id", officialChannelId);
-            presentFragment(new ChatActivity(args));
-        });
-
         ActionBarMenu menu = actionBar.createMenu();
         ActionBarMenuItem otherMenu = menu.addItem(0, R.drawable.ic_ab_other);
         otherMenu.addSubItem(backup_settings, LocaleController.getString("BackupSettings", R.string.BackupSettings));
@@ -230,20 +222,17 @@ public class MainSettingActivity extends BaseActivity {
     public void onResume() {
         super.onResume();
         checkSensitive();
-        loadChannelAndSet();
-    }
-
-    private void loadChannelAndSet() {
-        if (officialChannelCell == null) {
-            return;
+        if (listAdapter != null) {
+            listAdapter.notifyDataSetChanged();
         }
-        TLRPC.Chat chat = getMessagesController().getChat(officialChannelId);
-        officialChannelCell.set(chat, null);
     }
 
     @Override
     protected void updateRows() {
         super.updateRows();
+
+        officialChannelRow = addRow();
+        addRow();
 
         categoriesRow = addRow();
         generalRow = addRow("General");
@@ -273,6 +262,9 @@ public class MainSettingActivity extends BaseActivity {
     }
 
     private class ListAdapter extends BaseListAdapter {
+
+        private final int TYPE_CHANNEL = 10;
+
         public ListAdapter(Context context) {
             super(context);
         }
@@ -283,8 +275,22 @@ public class MainSettingActivity extends BaseActivity {
         }
 
         @Override
+        public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            if (viewType == TYPE_CHANNEL) {
+                return new RecyclerListView.Holder(new ProfileChannelCell(mContext));
+            }
+            return super.onCreateViewHolder(parent, viewType);
+        }
+
+        @Override
         public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
             switch (holder.getItemViewType()) {
+                case TYPE_CHANNEL: {
+                    ProfileChannelCell cell = (ProfileChannelCell) holder.itemView;
+                    TLRPC.Chat chat = getMessagesController().getChat(officialChannelId);
+                    cell.set(chat, null);
+                    break;
+                }
                 case TYPE_SHADOW: {
                     break;
                 }
@@ -332,11 +338,20 @@ public class MainSettingActivity extends BaseActivity {
         @Override
         public boolean isEnabled(RecyclerView.ViewHolder holder) {
             int type = holder.getItemViewType();
+            if (type == TYPE_CHANNEL) {
+                return true;
+            }
             return type == 2 || type == 3 || type == 5;
         }
 
         @Override
         public int getItemViewType(int position) {
+            if (position == officialChannelRow) {
+                return TYPE_CHANNEL;
+            }
+            if (position == officialChannelRow + 1) {
+                return TYPE_SHADOW;
+            }
             if (position == categories2Row || position == about2Row) {
                 return TYPE_SHADOW;
             } else if (position > categoriesRow && position < categories2Row) {
