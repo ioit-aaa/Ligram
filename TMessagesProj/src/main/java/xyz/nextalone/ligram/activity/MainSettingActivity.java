@@ -47,6 +47,7 @@ import org.telegram.ui.ActionBar.ActionBar;
 import org.telegram.ui.ActionBar.ActionBarMenu;
 import org.telegram.ui.ActionBar.ActionBarMenuItem;
 import org.telegram.ui.ActionBar.AlertDialog;
+import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.Cells.HeaderCell;
 import org.telegram.ui.Cells.ProfileChannelCell;
 import org.telegram.ui.Cells.TextCell;
@@ -277,7 +278,10 @@ public class MainSettingActivity extends BaseActivity {
         @Override
         public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             if (viewType == TYPE_CHANNEL) {
-                return new RecyclerListView.Holder(new ProfileChannelCell(MainSettingActivity.this));
+                ProfileChannelCell cell = new ProfileChannelCell(MainSettingActivity.this);
+                cell.setLayoutParams(new RecyclerView.LayoutParams(RecyclerView.LayoutParams.MATCH_PARENT, RecyclerView.LayoutParams.WRAP_CONTENT));
+                cell.setBackground(Theme.getSelectorDrawable(false));
+                return new RecyclerListView.Holder(cell);
             }
             return super.onCreateViewHolder(parent, viewType);
         }
