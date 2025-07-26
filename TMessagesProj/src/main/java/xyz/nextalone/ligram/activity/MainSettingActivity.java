@@ -277,7 +277,7 @@ public class MainSettingActivity extends BaseActivity {
         @Override
         public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             if (viewType == TYPE_CHANNEL) {
-                return new RecyclerListView.Holder(new ProfileChannelCell(mContext));
+                return new RecyclerListView.Holder(new ProfileChannelCell(MainSettingActivity.this));
             }
             return super.onCreateViewHolder(parent, viewType);
         }
