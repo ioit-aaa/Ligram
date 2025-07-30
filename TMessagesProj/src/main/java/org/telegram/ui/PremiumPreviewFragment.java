@@ -193,7 +193,7 @@ public class PremiumPreviewFragment extends BaseFragment implements Notification
     public final static int PREMIUM_FEATURE_ANIMATED_AVATARS = 7;
     public final static int PREMIUM_FEATURE_VOICE_TO_TEXT = 8;
     public final static int PREMIUM_FEATURE_ADVANCED_CHAT_MANAGEMENT = 9;
-    // public final static int PREMIUM_FEATURE_APPLICATION_ICONS = 10;
+    public final static int PREMIUM_FEATURE_APPLICATION_ICONS = 10;
     public final static int PREMIUM_FEATURE_ANIMATED_EMOJI = 11;
     public final static int PREMIUM_FEATURE_EMOJI_STATUS = 12;
     public final static int PREMIUM_FEATURE_TRANSLATIONS = 13;
@@ -270,8 +270,8 @@ public class PremiumPreviewFragment extends BaseFragment implements Notification
                 return PREMIUM_FEATURE_PROFILE_BADGE;
             case "animated_userpics":
                 return PREMIUM_FEATURE_ANIMATED_AVATARS;
-            // case "app_icons":
-            // return PREMIUM_FEATURE_APPLICATION_ICONS;
+            case "app_icons":
+                return PREMIUM_FEATURE_APPLICATION_ICONS;
             case "animated_emoji":
                 return PREMIUM_FEATURE_ANIMATED_EMOJI;
             case "emoji_status":
