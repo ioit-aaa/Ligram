@@ -316,6 +316,8 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
+import xyz.nextalone.ligram.activity.MainSettingActivity;
+import xyz.nextalone.gen.Config;
 
 public class ProfileActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate, DialogsActivity.DialogsActivityDelegate, SharedMediaLayout.SharedMediaPreloaderDelegate, ImageUpdater.ImageUpdaterDelegate, SharedMediaLayout.Delegate {
     private final static int PHONE_OPTION_CALL = 0,
@@ -5410,6 +5412,8 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
         avatarContainer2.addView(avatarBlurImage, LayoutHelper.createFrame(avatarSize, avatarSize, Gravity.TOP | Gravity.LEFT, 0, 0, 0, 0));
         avatarContainer2.addView(storyView, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, LayoutHelper.MATCH_PARENT));
         frameLayout.addView(actionButtonsContainer, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, AndroidUtilities.dp(buttonsHeight), Gravity.TOP | Gravity.START, 12, 0, 12, 0));
+
+        addLigramSettingsButton();
 
         updateProfileData(true);
 
@@ -15019,6 +15023,19 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
         final boolean visible = extraHeight >= dp(82);
         if (collectibleHintVisible == null || collectibleHintVisible != visible) {
             collectibleHint.animate().alpha((collectibleHintVisible = visible) ? 1.0f : 0.0f).setInterpolator(CubicBezierInterpolator.EASE_OUT).setDuration(200).start();
+        }
+    }
+
+    private void addLigramSettingsButton() {
+        if (Config.isLigram()) {
+            FrameLayout ligramSettingsButton = new FrameLayout(getContext());
+            ligramSettingsButton.setBackground(Theme.createSelectorDrawable(Theme.getColor(Theme.key_listSelector), 2, AndroidUtilities.dp(30)));
+            ligramSettingsButton.setOnClickListener(v -> presentFragment(new MainSettingActivity()));
+            ImageView settingsIcon = new ImageView(getContext());
+            settingsIcon.setImageResource(R.drawable.msg_settings);
+            settingsIcon.setColorFilter(new PorterDuffColorFilter(Theme.getColor(Theme.key_player_actionBarTitle), PorterDuff.Mode.MULTIPLY));
+            ligramSettingsButton.addView(settingsIcon, LayoutHelper.createFrame(24, 24, Gravity.CENTER));
+            actionButtonsContainer.addView(ligramSettingsButton, LayoutHelper.createLinear(0, LayoutHelper.MATCH_PARENT, 1.0f));
         }
     }
 
